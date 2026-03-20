@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Links to Profiles</title>
+</head>
+<body>
+
+    <h1>Profile Images</h1>
+
+    <!-- Your Image -->
+    <h2>My Profile</h2>
+    <a href="https://example.com/my-profile" target="_blank">
+        <img src="https://via.placeholder.com/200"
+             alt="My Image"
+             width="200"
+             height="200">
+    </a>
+
+    <!-- Friend's Image -->
+    <h2>Friend's Profile</h2>
+    <a href="https://example.com/friend-profile" target="_blank">
+        <img src="https://via.placeholder.com/200"
+             alt="Friend Image"
+             width="200"
+             height="200">
+    </a>
+
+</body>
+</html>
