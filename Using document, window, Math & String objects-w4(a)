@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JS Objects Example</title>
+</head>
+<body>
+
+<h1>JavaScript Objects Demo</h1>
+
+<p id="output"></p>
+
+<script>
+    // String object
+    let text = "hello world";
+    let upperText = text.toUpperCase();
+
+    // Math object
+    let randomNum = Math.random() * 100;
+
+    // Document object
+    document.getElementById("output").innerHTML =
+        "Uppercase: " + upperText + "<br>" +
+        "Random Number: " + randomNum;
+
+    // Window object
+    console.log("Window width: " + window.innerWidth);
+</script>
+
+</body>
+</html>
