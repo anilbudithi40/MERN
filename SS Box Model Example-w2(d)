@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Box Model</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 100px;
+            background-color: lightblue;
+
+            /* Box Model Properties */
+            padding: 20px;   /* space inside border */
+            border: 5px solid black; /* border */
+            margin: 30px;   /* space outside border */
+        }
+    </style>
+</head>
+<body>
+
+<h1>CSS Box Model</h1>
+
+<div class="box">
+    This is content inside the box.
+</div>
+
+</body>
+</html>
