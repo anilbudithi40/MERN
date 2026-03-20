@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>HTML5 Semantic Tags</title>
+</head>
+<body>
+
+<header>
+    <h1>My Website</h1>
+</header>
+
+<nav>
+    <a href="#">Home</a> |
+    <a href="#">About</a>
+</nav>
+
+<main>
+    <section>
+        <article>
+            <h2>Article Title</h2>
+            <p>This is an article inside a section.</p>
+        </article>
+    </section>
+
+    <aside>
+        <p>This is sidebar content</p>
+    </aside>
+
+    <figure>
+        <img src="https://via.placeholder.com/150" alt="Sample Image">
+        <figcaption>Sample Image Caption</figcaption>
+    </figure>
+
+    <div>
+        <p>This is a <span style="color:red;">span inside div</span>.</p>
+    </div>
+</main>
+
+<footer>
+    <p>© 2026 My Website</p>
+</footer>
+
+</body>
+</html>
