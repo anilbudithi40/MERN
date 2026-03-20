@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>CSS Colors</title>
+    <style>
+        .named { color: red; }
+        .hex { color: #00ff00; }
+        .rgb { color: rgb(0, 0, 255); }
+        .rgba { color: rgba(255, 0, 0, 0.5); }
+        .hsl { color: hsl(120, 100%, 50%); }
+    </style>
+</head>
+<body>
+
+<p class="named">Named Color (red)</p>
+<p class="hex">HEX Color (#00ff00)</p>
+<p class="rgb">RGB Color</p>
+<p class="rgba">RGBA Color (with transparency)</p>
+<p class="hsl">HSL Color</p>
+
+</body>
+</html>
