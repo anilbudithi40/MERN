@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Selectors</title>
+    <style>
+        /* Element selector */
+        p { color: blue; }
+
+        /* ID selector */
+        #heading { color: red; }
+
+        /* Class selector */
+        .box { background-color: lightgray; }
+
+        /* Group selector */
+        h1, h2 { font-family: Arial; }
+
+        /* Universal selector */
+        * { margin: 5px; }
+    </style>
+</head>
+<body>
+
+<h1 id="heading">Heading using ID</h1>
+<h2>Group Selector Example</h2>
+
+<p>This is a paragraph (element selector).</p>
+
+<div class="box">This is a class selector example.</div>
+
+</body>
+</html>
