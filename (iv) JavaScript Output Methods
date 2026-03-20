@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript Output</title>
+</head>
+<body>
+
+<h1>JavaScript Output Methods</h1>
+
+<p id="demo"></p>
+
+<script>
+    // innerHTML
+    document.getElementById("demo").innerHTML = "Using innerHTML";
+
+    // document.write()
+    document.write("<p>Using document.write()</p>");
+
+    // alert box
+    alert("Using alert()");
+
+    // console output
+    console.log("Using console.log()");
+</script>
+
+</body>
+</html>
