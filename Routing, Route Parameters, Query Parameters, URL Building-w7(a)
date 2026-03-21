@@ -1,0 +1,34 @@
+// app.js
+const express = require("express");
+const app = express();
+
+// Basic route
+app.get("/", (req, res) => {
+    res.send("Welcome to Express Routing!");
+});
+
+// Route with parameter
+app.get("/user/:id", (req, res) => {
+    const userId = req.params.id;
+    res.send(`User ID: ${userId}`);
+});
+
+// Query parameters
+app.get("/search", (req, res) => {
+    const name = req.query.name;
+    const age = req.query.age;
+    res.send(`Search Name: ${name}, Age: ${age}`);
+});
+
+// URL building
+app.get("/profile/:username", (req, res) => {
+    const username = req.params.username;
+
+    // build URL dynamically
+    const profileUrl = `/profile/${username}`;
+    res.send(`Profile URL: ${profileUrl}`);
+});
+
+app.listen(3000, () => {
+    console.log("Server running on http://localhost:3000");
+});
