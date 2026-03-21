@@ -1,0 +1,41 @@
+const express = require("express");
+const session = require("express-session");
+const cookieParser = require("cookie-parser");
+
+const app = express();
+
+app.use(cookieParser());
+
+// session setup
+app.use(session({
+    secret: "secretKey",
+    resave: false,
+    saveUninitialized: true
+}));
+
+// login route (create session)
+app.get("/login", (req, res) => {
+    req.session.username = "Alice";
+    res.cookie("user", "Alice");
+    res.send("Session created and cookie set");
+});
+
+// access session
+app.get("/dashboard", (req, res) => {
+    if (req.session.username) {
+        res.send(`Welcome ${req.session.username}`);
+    } else {
+        res.send("Please login first");
+    }
+});
+
+// logout
+app.get("/logout", (req, res) => {
+    req.session.destroy();
+    res.clearCookie("user");
+    res.send("Logged out");
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});

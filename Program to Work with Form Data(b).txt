@@ -1,0 +1,28 @@
+const express = require("express");
+const bodyParser = require("body-parser");
+
+const app = express();
+
+// middleware
+app.use(bodyParser.urlencoded({ extended: true }));
+
+// form page
+app.get("/", (req, res) => {
+    res.send(`
+        <form method="POST" action="/submit">
+            Name: <input type="text" name="name" /><br/>
+            Age: <input type="number" name="age" /><br/>
+            <button type="submit">Submit</button>
+        </form>
+    `);
+});
+
+// handle form data
+app.post("/submit", (req, res) => {
+    const { name, age } = req.body;
+    res.send(`Received: Name = ${name}, Age = ${age}`);
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
