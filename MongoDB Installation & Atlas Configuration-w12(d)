@@ -1,0 +1,5 @@
+const mongoose = require("mongoose");
+
+mongoose.connect("your_connection_string_here")
+.then(() => console.log("Connected to MongoDB Atlas"))
+.catch(err => console.log(err));
