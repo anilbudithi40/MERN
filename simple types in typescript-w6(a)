@@ -1,0 +1,55 @@
+// SIMPLE TYPES
+
+// number
+let age: number = 20;
+
+// string
+let userName: string = "Alice";
+
+// boolean
+let isStudent: boolean = true;
+
+// array
+let marks: number[] = [85, 90, 78];
+
+// tuple
+let person: [string, number] = ["Bob", 25];
+
+console.log("Simple Types:");
+console.log(age, userName, isStudent);
+console.log(marks);
+console.log(person);
+
+
+// SPECIAL TYPES
+
+// any (can hold any type)
+let randomValue: any = 10;
+randomValue = "Now I'm a string";
+console.log("\nAny Type:", randomValue);
+
+// unknown (safer than any)
+let unknownValue: unknown = "Hello";
+
+// need type check before using
+if (typeof unknownValue === "string") {
+    console.log("Unknown Type:", unknownValue.toUpperCase());
+}
+
+// void (no return value)
+function greet(): void {
+    console.log("Hello!");
+}
+greet();
+
+// never (function never returns)
+function throwError(message: string): never {
+    throw new Error(message);
+}
+// throwError("Something went wrong"); // Uncomment to test
+
+// null and undefined
+let emptyValue: null = null;
+let notAssigned: undefined = undefined;
+
+console.log("\nNull & Undefined:", emptyValue, notAssigned);
