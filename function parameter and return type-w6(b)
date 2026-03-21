@@ -1,0 +1,54 @@
+// FUNCTION WITH PARAMETER TYPES AND RETURN TYPE
+
+// 1. Function with parameters and return type
+function add(a: number, b: number): number {
+    return a + b;
+}
+
+let sum = add(10, 20);
+console.log("Sum:", sum);
+
+
+// 2. Function with default parameter
+function greet(name: string = "Guest"): string {
+    return "Hello, " + name;
+}
+
+console.log(greet("Alice"));
+console.log(greet()); // uses default value
+
+
+// 3. Function with optional parameter
+function displayInfo(name: string, age?: number): string {
+    if (age !== undefined) {
+        return `${name} is ${age} years old`;
+    }
+    return `${name}'s age is not provided`;
+}
+
+console.log(displayInfo("Bob", 25));
+console.log(displayInfo("Charlie"));
+
+
+// 4. Function returning void (no return value)
+function logMessage(message: string): void {
+    console.log("Message:", message);
+}
+
+logMessage("This is a log");
+
+
+// 5. Arrow function with types
+const multiply = (x: number, y: number): number => {
+    return x * y;
+};
+
+console.log("Product:", multiply(5, 4));
+
+
+// 6. Function with rest parameters
+function total(...numbers: number[]): number {
+    return numbers.reduce((sum, num) => sum + num, 0);
+}
+
+console.log("Total:", total(1, 2, 3, 4, 5));
