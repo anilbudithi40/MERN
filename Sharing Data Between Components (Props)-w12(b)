@@ -1,0 +1,21 @@
+import React from "react";
+import ReactDOM from "react-dom/client";
+
+// Child Component
+function Child(props) {
+  return <h3>Message: {props.message}</h3>;
+}
+
+// Parent Component
+function Parent() {
+  const data = "Hello from Parent!";
+  return (
+    <div>
+      <h2>Parent Component</h2>
+      <Child message={data} />
+    </div>
+  );
+}
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(<Parent />);
