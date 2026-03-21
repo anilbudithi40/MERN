@@ -1,0 +1,36 @@
+const express = require("express");
+const app = express();
+
+app.use(express.json());
+
+// Dummy data
+let users = [
+    { id: 1, name: "Alice" },
+    { id: 2, name: "Bob" }
+];
+
+// GET - retrieve data
+app.get("/users", (req, res) => {
+    res.json(users);
+});
+
+// POST - accept data
+app.post("/users", (req, res) => {
+    const newUser = {
+        id: users.length + 1,
+        name: req.body.name
+    };
+    users.push(newUser);
+    res.json(newUser);
+});
+
+// DELETE - delete resource
+app.delete("/users/:id", (req, res) => {
+    const id = parseInt(req.params.id);
+    users = users.filter(user => user.id !== id);
+    res.send("User deleted");
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
