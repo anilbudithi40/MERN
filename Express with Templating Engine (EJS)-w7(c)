@@ -1,0 +1,17 @@
+const express = require("express");
+const app = express();
+
+// set EJS as templating engine
+app.set("view engine", "ejs");
+
+// route to render template
+app.get("/", (req, res) => {
+    res.render("index", {
+        title: "Home Page",
+        message: "Welcome to EJS Templating!"
+    });
+});
+
+app.listen(3000, () => {
+    console.log("Server running on port 3000");
+});
